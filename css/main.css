@@ -1,0 +1,134 @@
+body {
+  margin: 0;
+  padding: 1.5em;
+  font-family: sans-serif;
+  background: #FFEFBF;
+}
+
+/**
+* Header
+**/
+
+header{
+  grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar{
+  text-decoration: none;
+  list-style: none;
+}
+
+.navbar .nav-item {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.navbar .navitem:last-child(){
+  margin: 0;
+}
+
+.navbar .nav-item a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}
+
+/**
+* Jumbo
+*/
+
+.jumbo {
+  grid-area: jumbo;
+  background: url('../img/bridge.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 0 -1.5em;
+  height: 30em;
+  position: relative;
+}
+
+.jumbo .caption {
+  display: flex;
+  bottom: 0;
+  position: absolute;
+  justify-content: space-around;
+  align-items: center;
+  background: black;
+  opacity: 70%;
+  width: 100%;
+}
+
+.jumbo .caption .text {
+  color: white;
+  font-weight: bold;
+}
+
+.jumbo .caption .more {
+  background-color: red;
+  border: none;
+  color: white;
+  font-weight: bold;
+  border-radius: 3em;
+  height: 1.5em;
+}
+
+/**
+* Section
+*/
+
+article {
+  grid-area: article;
+}
+
+article h2,aside h2{
+  text-transform: uppercase;
+}
+
+aside {
+  grid-area: aside;
+  background: grey;
+  color: white;
+  padding: 0 2em;
+  text-align: justify;
+}
+
+/**
+* Footer
+*/
+
+footer {
+  grid-area: footer;
+  display: grid;
+  grid-gap:1.5em;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 0;
+  text-align: center;
+}
+
+.myFriends {
+  text-align: center;
+}
+
+.friends {
+  display: flex;
+  justify-content: space-around;
+}
+
+.tweet, .pics, .myFriends {
+  background: lightblue;
+}
+
+/**
+* Main Container
+*/
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(5,auto);
+  grid-gap: 1.5em;
+  grid-template-areas: 'header header' 'jumbo jumbo' 'jumbo jumbo' 'article aside' 'footer footer';
+  text-align: justify;
+}
